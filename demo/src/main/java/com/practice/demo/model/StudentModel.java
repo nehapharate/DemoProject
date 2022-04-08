@@ -1,13 +1,25 @@
 package com.practice.demo.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class StudentModel {
 
+	@Id
 	private int id;
+	@Column
 	private String fname;
+	@Column
 	private String mname;
+	@Column
 	private String lname;
-	
+
+	public StudentModel() {
+
+	}
+
 	public StudentModel(int id, String fname, String mname, String lname) {
 		super();
 		this.id = id;
@@ -47,7 +59,5 @@ public class StudentModel {
 	public void setLname(String lname) {
 		this.lname = lname;
 	}
-	
-	
-	
+
 }
